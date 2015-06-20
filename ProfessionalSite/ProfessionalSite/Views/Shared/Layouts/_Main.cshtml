@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title>@ViewBag.Title</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    @Styles.Render("~/Content/commoncss")
+
+    @RenderSection("pagecss", false)
+
+</head>
+<body>
+
+    @Html.Action("NavBar", "NavBar")
+
+    @Html.Action("Carousel", "Home")
+
+    <div class="body-content">
+        @RenderBody()
+    </div>
+
+
+    <div class="row">&nbsp;</div>
+
+    <div class="col-md-offset-2 col-md-8">
+        <hr />
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                Andreo Sebastiani
+            </div>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/commonjavascript")
+
+    @RenderSection("pagescripts", false)
+
+
+</body>
+</html>
+
+
+
